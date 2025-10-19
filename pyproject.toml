@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siglip2-image-indexer"
+version = "1.0.0"
+authors = [
+    { name = "Yudivián Almeida Cruz", email = "yudivian@gmail.com" },
+]
+description = "A command-line tool to index images using SigLIP2 models and generate embeddings"
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
+    "Pillow>=10.0.0",
+    "PyYAML>=6.0",
+    "tqdm>=4.60.0",
+    "pillow-heif>=0.10.0",
+    "huggingface_hub>=0.20.0",
+    "piexif>=1.1.3",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.0"]
+
+[project.urls]
+"Homepage" = "https://github.com/yudivian/siglip2-img-indexer"
+"Bug Tracker" = "https://github.com/yudivian/siglip2-img-indexer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+siglip2-image-indexer = "image_indexer.cli:main"

@@ -1,0 +1,45 @@
+# ----------------------------------------------------
+# Example Configuration for the Image Indexer v3.0
+# ----------------------------------------------------
+
+# -- Input and Output Paths --
+# List of directories to scan for images recursively.
+input_dirs:
+  - "pictures"
+  # - /path/to/your/images/collection2
+
+# Path to the output index file.
+output_file: "image_index.jsonl"
+
+# -- Model and Processing Configuration --
+# Hugging Face model name for vision embeddings.
+model_name: "google/siglip2-base-patch16-naflex"
+
+# Number of images to process in a single batch.
+# Adjust based on your GPU memory.
+batch_size: 32
+
+# Hardware device to use.
+# Options: "auto", "cpu", "cuda", "mps".
+# "auto" will attempt to use GPU if available.
+device: "auto"
+
+# -- Thumbnail Generation (Optional) --
+# Enable or disable thumbnail creation.
+create_thumbnails: true
+
+# Directory where thumbnails will be saved.
+thumbnail_dir: "thumbnails"
+
+# Size of the generated thumbnails (width, height).
+thumbnail_size: [128, 128]
+
+# -- Output Format --
+# Format for the output file.
+# Options: "jsonl", "pkl"
+output_format: "jsonl"
+
+# -- Logging --
+# Logging level.
+# Options: "DEBUG", "INFO", "WARNING", "ERROR"
+log_level: "INFO"
