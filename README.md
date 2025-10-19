@@ -1,4 +1,4 @@
-# Image Indexer v3.0
+# Siglip2 Image Indexer v1.0.1
 
 Image Indexer is a powerful and flexible command-line tool designed to create a vector index from your local image directories. It uses state-of-the-art vision models from the Hugging Face library to generate embeddings for each image, storing them in an efficient format for use in similarity search, image retrieval, and other machine learning applications.
 
