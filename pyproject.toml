@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "siglip2-image-indexer"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
     { name = "Yudivián Almeida Cruz", email = "yudivian@gmail.com" },
 ]
